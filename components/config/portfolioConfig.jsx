@@ -15,7 +15,7 @@ export const projects = [
     title: 'Site SemFronteiras',
     category: 'Web', // Deve ser uma das categorias acima
     description: 'Site institucional para a Empresa Júnior SemFronteiras, focado em ofertar serviços de consultoria empresarial.',
-    image: '/imagens/SemFronteiras.png',
+    image: '/site-fronteira-tec-4/imagens/SemFronteiras.png',
     tech: ['React', 'HTML', 'Tailwind CSS', 'JavaScript']
   },
 
@@ -24,7 +24,7 @@ export const projects = [
     title: 'Sistema da Incubadora de Negócios',
     category: 'Sistemas',
     description: 'Sistema integrado para a gestão dos incubados.',
-    image: '/imagens/inne.png',
+    image: '/site-fronteira-tec-4/imagens/inne.png',
     tech: ['React.js', 'Node.js', 'PostgreSQL']
   },
 
