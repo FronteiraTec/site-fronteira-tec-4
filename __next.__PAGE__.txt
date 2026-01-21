@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[43652,["/site-fronteira-tec-4/_next/static/chunks/76e974f79da84b62.js","/site-fronteira-tec-4/_next/static/chunks/9acbf50fad70656b.js","/site-fronteira-tec-4/_next/static/chunks/f83222e0147bb7cf.js"],"default"]
+3:I[71036,["/site-fronteira-tec-4/_next/static/chunks/162cb635e5453bc7.js","/site-fronteira-tec-4/_next/static/chunks/1547a5d5f17218d3.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"AEJpYRnM_zenojBnPJVip","rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","script","script-0",{"src":"/site-fronteira-tec-4/_next/static/chunks/76e974f79da84b62.js","async":true}],["$","script","script-1",{"src":"/site-fronteira-tec-4/_next/static/chunks/9acbf50fad70656b.js","async":true}],["$","script","script-2",{"src":"/site-fronteira-tec-4/_next/static/chunks/f83222e0147bb7cf.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
