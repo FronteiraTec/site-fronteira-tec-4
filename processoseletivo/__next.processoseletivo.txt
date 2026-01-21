@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
-2:I[90931,["/site-fronteira-tec-4/_next/static/chunks/162cb635e5453bc7.js","/site-fronteira-tec-4/_next/static/chunks/1547a5d5f17218d3.js"],"default"]
-3:I[34419,["/site-fronteira-tec-4/_next/static/chunks/162cb635e5453bc7.js","/site-fronteira-tec-4/_next/static/chunks/1547a5d5f17218d3.js"],"default"]
-0:{"buildId":"38XJsQc7jKbmHOFcE1I66","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+2:I[90931,["/_next/static/chunks/162cb635e5453bc7.js","/_next/static/chunks/1547a5d5f17218d3.js"],"default"]
+3:I[34419,["/_next/static/chunks/162cb635e5453bc7.js","/_next/static/chunks/1547a5d5f17218d3.js"],"default"]
+0:{"buildId":"s2wBBxyZEPsBIeFlsGqjx","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
