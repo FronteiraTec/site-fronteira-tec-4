@@ -6,8 +6,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   reactStrictMode: true,
-  // Descomente a linha abaixo e substitua 'seu-repositorio' pelo nome do seu repositório
-  // basePath: '/seu-repositorio',
+  basePath: '/site-fronteira-tec-4',
 };
 
 export default nextConfig;
