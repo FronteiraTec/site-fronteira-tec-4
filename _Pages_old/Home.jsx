@@ -9,7 +9,7 @@ import PortfolioSection from '@/components/landing/PortfolioSection';
 import ContactSection from '@/components/landing/ContactSection';
 import Footer from '@/components/landing/Footer';
 
-export default function Page() {
+export default function Home() {
   const [isDark, setIsDark] = useState(false);
   const [mounted, setMounted] = useState(false);
 
