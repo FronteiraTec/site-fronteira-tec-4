@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "export": "next build",
-    "deploy": "npm run export && npx gh-pages -d out"
+    "lint": "eslint"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
@@ -22,6 +20,7 @@
     "next": "16.1.4",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-router-dom": "^7.12.0",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.4.0"
   },

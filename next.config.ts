@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: isProduction ? '/site-fronteira-tec-4' : '',
   images: {
-    unoptimized: true,
-  },
-  reactStrictMode: true,
-  basePath: '/site-fronteira-tec-4',
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
