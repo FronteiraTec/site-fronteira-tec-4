@@ -2,9 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import ParticleNetwork from './ParticleNetwork';
 
-export default function HeroSection({ isDark = false }) {
+export default function HeroSection({ isDark = false, children }) {
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,7 +14,7 @@ export default function HeroSection({ isDark = false }) {
         ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900' 
         : 'bg-gradient-to-br from-white via-gray-50 to-green-50'
     }`}>
-      <ParticleNetwork isDark={isDark} />
+      {children}
       
       {/* Smoke Effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

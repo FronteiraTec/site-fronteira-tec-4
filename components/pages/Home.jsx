@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import AboutSection from '@/components/landing/AboutSection';
@@ -10,6 +11,15 @@ import ContactSection from '@/components/landing/ContactSection';
 import Footer from '@/components/landing/Footer';
 import SEOHead from '@/components/SEOHead';
 import SitemapGenerator from '@/components/SitemapGenerator';
+
+// Lazy load ParticleNetwork para melhor performance
+const ParticleNetwork = dynamic(
+  () => import('@/components/landing/ParticleNetwork'),
+  { 
+    ssr: false,
+    loading: () => <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-green-50" />
+  }
+);
 
 export default function Home() {
   const [isDark, setIsDark] = useState(() => {
@@ -32,7 +42,9 @@ export default function Home() {
       <SitemapGenerator />
       <Navbar isDark={isDark} onThemeToggle={toggleTheme} />
       <main>
-        <HeroSection isDark={isDark} />
+        <HeroSection isDark={isDark}>
+          <ParticleNetwork isDark={isDark} />
+        </HeroSection>
         <AboutSection isDark={isDark} />
         <ServicesSection isDark={isDark} />
         <PortfolioSection isDark={isDark} />
