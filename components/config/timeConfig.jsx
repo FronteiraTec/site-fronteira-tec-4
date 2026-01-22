@@ -43,8 +43,48 @@ export const membrosAtuais = [
     diretoria: 'Mercado',
     curso: 'Ciência da Computação',
     foto: '/imagens/isabela.png',
-    linkedin: '#',
-    github: '#'
+    linkedin: ' www.linkedin.com/in/isabela-roso',
+    github: 'https://github.com/RosoIsabela'
+  },
+  {
+    id: 5,
+    nome: 'Thiago Spanevello',
+    cargo: 'Treinee de Projetos',
+    diretoria: 'Projetos',
+    curso: 'Ciência da Computação',
+    foto: '/imagens/thiago.jpeg',
+    linkedin: 'https://www.linkedin.com/in/thiago-spanevello-168309355/',
+    github: 'https://github.com/thiagoSpanevello'
+  },
+  {
+    id: 6,
+    nome: 'Luigi',
+    cargo: 'Treinee de Projetos',
+    diretoria: 'Projetos',
+    curso: 'Ciência da Computação',
+    foto: '/imagens/luigi.jpeg',
+    linkedin: null,
+    github: 'github.com/luigiPisoni'
+  },
+  {
+    id: 7,
+    nome: 'Nycollas',
+    cargo: 'Treinee de Projetos',
+    diretoria: 'Projetos',
+    curso: 'Ciência da Computação',
+    foto: '/imagens/nycollas.png',
+    linkedin: null,
+    github: null
+  },
+  {
+    id: 7,
+    nome: 'Jan Charles',
+    cargo: 'Treinee de Gestão Interna',
+    diretoria: 'Gestão Interna',
+    curso: 'Ciência da Computação',
+    foto: '/imagens/jan.png',
+    linkedin: null,
+    github: null
   }
 ];
 

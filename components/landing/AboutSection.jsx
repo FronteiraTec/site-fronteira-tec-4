@@ -45,7 +45,7 @@ export default function AboutSection({ isDark = false }) {
             </h2>
             <p className={`text-lg leading-relaxed mb-6 ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
               A <strong className={isDark ? 'text-green-400' : 'text-[#1B5E20]'}>FronteiraTec</strong> nasceu da paixão por transformar 
-              desafios complexos em soluções digitais elegantes. Somos uma empresa de tecnologia 
+              desafios complexos em soluções digitais elegantes. Somos uma empresa sem fins lucrativos de tecnologia formada por estudantes 
               especializada em desenvolvimento de software personalizado, focada em entregar 
               resultados que impulsionam o crescimento dos nossos parceiros.
             </p>
