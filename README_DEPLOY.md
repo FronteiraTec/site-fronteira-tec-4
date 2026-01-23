@@ -51,7 +51,7 @@ Remove-Item -Path "out","_next",".next" -Recurse -Force -ErrorAction SilentlyCon
 ### Passo 2: Build do Next.js
 ```powershell
 npm run build
-```
+``` oi
 
 **Verificações após build:**
 - ✅ Build concluído sem erros
