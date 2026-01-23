@@ -1,13 +1,33 @@
-const CACHE_NAME = 'fronteiratec-v2';
-const urlsToCache = [
-  '/',
-  '/nossotime',
-  '/processoseletivo', 
-  '/processotrabalho',
-  '/imagens/SemFronteiras.png',
-  '/imagens/inne.png',
-  '/imagens/gustavo.png',
-  '/imagens/loude.png',
+// Service Worker de limpeza - Remove todos os caches e se auto-desinstala
+self.addEventListener('install', function(event) {
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          console.log('Removendo cache:', cacheName);
+          return caches.delete(cacheName);
+        })
+      );
+    }).then(() => {
+      console.log('Service Worker auto-desinstalando...');
+      return self.registration.unregister();
+    }).then(() => {
+      console.log('Recarregando página...');
+      return clients.matchAll();
+    }).then((clients) => {
+      clients.forEach(client => client.navigate(client.url));
+    })
+  );
+});
+
+// Não faz cache de nada
+self.addEventListener('fetch', function(event) {
+  event.respondWith(fetch(event.request));
+});
   '/imagens/komi.png',
   '/imagens/isabela.png',
   '/imagens/ruan.png'
