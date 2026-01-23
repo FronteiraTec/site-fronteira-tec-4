@@ -45,9 +45,7 @@ Get-ChildItem -Path "public\imagens" -Filter "*.png","*.jpg","*.jpeg"
 
 ### Passo 1: Limpar Builds Antigos
 ```powershell
-Remove-Item -Path "out" -Recurse -Force -ErrorAction SilentlyContinue
-Remove-Item -Path ".next" -Recurse -Force -ErrorAction SilentlyContinue
-Remove-Item -Path "_next" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "out","_next",".next" -Recurse -Force -ErrorAction SilentlyContinue
 ```
 
 ### Passo 2: Build do Next.js
@@ -59,16 +57,14 @@ npm run build
 - ✅ Build concluído sem erros
 - ✅ Pasta `out/` foi criada
 - ✅ Arquivos HTML gerados em `out/`
+- ✅ Pasta `out/_next/static/` contém chunks, CSS e fontes
 
-### Passo 3: Copiar Arquivos Estáticos
+### Passo 3: Copiar Arquivos Adicionais
 ```powershell
-# Copiar diretório _next
-Remove-Item -Path "_next" -Recurse -Force -ErrorAction SilentlyContinue
-Copy-Item -Path "out\_next" -Destination "_next" -Recurse -Force
-
-# Copiar HTMLs
-Copy-Item -Path "out\*.html" -Destination "." -Force
-Copy-Item -Path "out\*.txt" -Destination "." -Force -ErrorAction SilentlyContinue
+# Service Worker e recursos extras
+Copy-Item -Path "public\sw.js" -Destination "out\sw.js" -Force
+Copy-Item -Path "public\imagens" -Destination "out\imagens" -Recurse -Force
+Copy-Item -Path "public\limpar-cache.html" -Destination "out\limpar-cache.html" -Force
 ```
 
 ### Passo 4: Commit e Push
@@ -78,9 +74,32 @@ git commit -m "Update: Descrição da mudança"
 git push
 ```
 
+**⚠️ IMPORTANTE:** A pasta `out/` agora é versionada no Git para o GitHub Pages funcionar corretamente!
+
 ---
 
 ## 🐛 Resolução de Problemas
+
+### Problema: Arquivos 404 no site em produção
+
+**Sintoma**: Erros 404 para arquivos `_next/static/chunks/*.js`, `*.css` ou `*.woff2`
+
+**Causa**: Pasta `out/` não foi commitada ao Git
+
+**Solução**:
+1. Verificar se `.gitignore` NÃO está bloqueando `/out/`
+2. Rebuild completo:
+   ```powershell
+   Remove-Item -Path "out","_next",".next" -Recurse -Force -ErrorAction SilentlyContinue
+   npm run build
+   Copy-Item -Path "public\sw.js" -Destination "out\sw.js" -Force
+   Copy-Item -Path "public\imagens" -Destination "out\imagens" -Recurse -Force
+   git add .
+   git commit -m "fix: rebuild completo"
+   git push
+   ```
+
+---
 
 ### Problema: Imagem não aparece (404)
 
