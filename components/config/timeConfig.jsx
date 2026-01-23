@@ -85,6 +85,16 @@ export const membrosAtuais = [
     foto: '/imagens/jan.png',
     linkedin: null,
     github: null
+  },
+  {
+    id: 8,
+    nome: 'Lindy',
+    cargo: 'Membro de Mercado',
+    diretoria: 'Mercado',
+    curso: 'Ciência da Computação',
+    foto: '/imagens/lindy.jpeg',
+    linkedin: null,
+    github: null
   }
 ];
 
