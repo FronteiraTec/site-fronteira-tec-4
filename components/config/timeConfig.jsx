@@ -42,7 +42,7 @@ export const membrosAtuais = [
     cargo: 'Diretora de Mercado',
     diretoria: 'Mercado',
     curso: 'Ciência da Computação',
-    foto: '/imagens/isabela.png',
+    foto: '/imagens/isabela.jpeg',
     linkedin: ' www.linkedin.com/in/isabela-roso',
     github: 'https://github.com/RosoIsabela'
   },
@@ -77,7 +77,7 @@ export const membrosAtuais = [
     github: null
   },
   {
-    id: 7,
+    id: 8,
     nome: 'Jan Charles',
     cargo: 'Treinee de Gestão Interna',
     diretoria: 'Gestão Interna',
