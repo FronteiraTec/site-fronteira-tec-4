@@ -51,7 +51,7 @@ Remove-Item -Path "out","_next",".next" -Recurse -Force -ErrorAction SilentlyCon
 ### Passo 2: Build do Next.js
 ```powershell
 npm run build
-``` oi
+```
 
 **Verificações após build:**
 - ✅ Build concluído sem erros
@@ -59,22 +59,28 @@ npm run build
 - ✅ Arquivos HTML gerados em `out/`
 - ✅ Pasta `out/_next/static/` contém chunks, CSS e fontes
 
-### Passo 3: Copiar Arquivos Adicionais
+### Passo 3: Copiar Arquivos para Raiz (GitHub Pages)
 ```powershell
-# Service Worker e recursos extras
+# Copiar Service Worker e recursos extras para out/
 Copy-Item -Path "public\sw.js" -Destination "out\sw.js" -Force
 Copy-Item -Path "public\imagens" -Destination "out\imagens" -Recurse -Force
 Copy-Item -Path "public\limpar-cache.html" -Destination "out\limpar-cache.html" -Force
+
+# Copiar tudo de out/ para raiz (para GitHub Pages servir corretamente)
+Copy-Item -Path "out\*" -Destination "." -Recurse -Force -Exclude @("out")
 ```
 
 ### Passo 4: Commit e Push
 ```powershell
-git add .
+git add -A
 git commit -m "Update: Descrição da mudança"
 git push
 ```
 
-**⚠️ IMPORTANTE:** A pasta `out/` agora é versionada no Git para o GitHub Pages funcionar corretamente!
+**⚠️ IMPORTANTE:** 
+- Arquivos são gerados em `out/` e depois copiados para a raiz
+- GitHub Pages serve da RAIZ do repositório (branch `main`)
+- Arquivo `.nojekyll` permite pastas com underscore (`_next`)
 
 ---
 
